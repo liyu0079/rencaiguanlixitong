@@ -5,31 +5,18 @@
        <el-tabs v-model="activeName" @tab-click="handleClick">
          <el-tab-pane label="用户管理" name="first">
           <span>企业用户登录</span>
-        <el-form :model="form" status-icon :rules="rules" ref="ruleForm">
-        <el-form-item prop="username">
+        <el-form  status-icon  ref="ruleForm">
+        <el-form-item >
           <el-input
             type="text"
-            v-model.trim="form.username"
             placeholder="请输入用户名"
             autocomplete="off"
           ></el-input>
         </el-form-item>
         <el-form-item prop="pwd">
-          <el-input type="password" v-model.trim="form.pwd" placeholder="请输入密码" autocomplete="off"></el-input>
+          <el-input type="password"  placeholder="请输入密码" autocomplete="off"></el-input>
         </el-form-item>
-        <el-form-item class="login-btn">
-          <el-switch
-            style="margin-right:20px;"
-            v-model="state"
-            inactive-color="#F56C6C"
-            :inactive-text="state ? '还没有账号？点击注册':'已有账号，点击登录'"
-            @change="changeState"
-          ></el-switch>
-          <el-button
-            :type="state ? 'primary' : 'danger'"
-            @click="submit('ruleForm')"
-          >{{state ? '登 录' : '注 册'}}</el-button>
-        </el-form-item>
+       
       </el-form>
     </el-tab-pane>
     <el-tab-pane label="配置管理" name="second">
@@ -114,6 +101,16 @@ export default {
   //     };
   //   },
   // },
+  data() {
+    return {
+      activeName: 'second'
+    }
+  },
+  methods: {
+    handleClick(tab, event) {
+      console.log(tab, event)
+    }
+  }
 }
 </script>
 

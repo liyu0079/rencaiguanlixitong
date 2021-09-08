@@ -3,8 +3,7 @@
     <el-card>
       <div class="login-title">小微企业跨组织人才管理系统</div>
        <el-tabs v-model="activeName" @tab-click="handleClick">
-         <el-tab-pane label="用户管理" name="first">
-          <span>企业用户登录</span>
+         <el-tab-pane label="企业用户" name="first">
         <el-form  status-icon  ref="ruleForm">
         <el-form-item >
           <el-input
@@ -19,12 +18,35 @@
        
       </el-form>
     </el-tab-pane>
-    <el-tab-pane label="配置管理" name="second">
-      <span>求职用户登录</span>
-
+    <el-tab-pane label="求职用户" name="second">
+ <el-form  status-icon  ref="ruleForm">
+        <el-form-item >
+          <el-input
+            type="text"
+            placeholder="请输入用户名"
+            autocomplete="off"
+          ></el-input>
+        </el-form-item>
+        <el-form-item prop="pwd">
+          <el-input type="password"  placeholder="请输入密码" autocomplete="off"></el-input>
+        </el-form-item>
+       
+      </el-form>
     </el-tab-pane>
-    <el-tab-pane label="角色管理" name="third">
-      <span>管理员登录</span>
+    <el-tab-pane label="管理员" name="third">
+       <el-form  status-icon  ref="ruleForm">
+        <el-form-item >
+          <el-input
+            type="text"
+            placeholder="请输入用户名"
+            autocomplete="off"
+          ></el-input>
+        </el-form-item>
+        <el-form-item prop="pwd">
+          <el-input type="password"  placeholder="请输入密码" autocomplete="off"></el-input>
+        </el-form-item>
+       
+      </el-form>
     </el-tab-pane>
   </el-tabs>
   </el-card>

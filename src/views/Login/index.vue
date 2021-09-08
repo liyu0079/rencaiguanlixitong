@@ -15,6 +15,19 @@
         <el-form-item prop="pwd">
           <el-input type="password"  placeholder="请输入密码" autocomplete="off"></el-input>
         </el-form-item>
+         <el-form-item class="login-btn">
+          <el-switch
+            style="margin-right:20px;"
+            v-model="state"
+            inactive-color="#F56C6C"
+            :inactive-text="state ? '还没有账号？点击注册':'已有账号，点击登录'"
+            @change="changeState"
+          ></el-switch>
+          <el-button
+            :type="state ? 'primary' : 'danger'"
+            @click="submit('ruleForm')"
+          >{{state ? '登 录' : '注 册'}}</el-button>
+        </el-form-item>
        
       </el-form>
     </el-tab-pane>
@@ -30,7 +43,19 @@
         <el-form-item prop="pwd">
           <el-input type="password"  placeholder="请输入密码" autocomplete="off"></el-input>
         </el-form-item>
-       
+        <el-form-item class="login-btn">
+          <el-switch
+            style="margin-right:20px;"
+            v-model="state"
+            inactive-color="#F56C6C"
+            :inactive-text="state ? '还没有账号？点击注册':'已有账号，点击登录'"
+            @change="changeState"
+          ></el-switch>
+          <el-button
+            :type="state ? 'primary' : 'danger'"
+            @click="submit('ruleForm')"
+          >{{state ? '登 录' : '注 册'}}</el-button>
+        </el-form-item>
       </el-form>
     </el-tab-pane>
     <el-tab-pane label="管理员" name="third">
@@ -45,7 +70,12 @@
         <el-form-item prop="pwd">
           <el-input type="password"  placeholder="请输入密码" autocomplete="off"></el-input>
         </el-form-item>
-       
+        <el-form-item class="login-btn">
+          <el-button
+            :type="'primary'"
+            @click="submit('ruleForm')"
+          >{{'登 录'}}</el-button>
+        </el-form-item>
       </el-form>
     </el-tab-pane>
   </el-tabs>
@@ -150,7 +180,7 @@ export default {
 /* el-card卡片组件样式 */
 .el-card {
   width: 420px;
-  height: 300px;
+  height: 350px;
 }
 /* 登录标题样式 */
 .login-title {

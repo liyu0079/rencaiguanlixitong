@@ -27,6 +27,7 @@
             :type="state ? 'primary' : 'danger'"
             @click="submit('ruleForm')"
           >{{state ? '登 录' : '注 册'}}</el-button>
+          <el-button type="info" native-type="reset">重置</el-button>
         </el-form-item>
        
       </el-form>
@@ -55,6 +56,7 @@
             :type="state ? 'primary' : 'danger'"
             @click="submit('ruleForm')"
           >{{state ? '登 录' : '注 册'}}</el-button>
+           <el-button type="info" native-type="reset">重置</el-button>
         </el-form-item>
       </el-form>
     </el-tab-pane>
@@ -75,6 +77,7 @@
             :type="'primary'"
             @click="submit('ruleForm')"
           >{{'登 录'}}</el-button>
+           <el-button type="info" native-type="reset">重置</el-button>
         </el-form-item>
       </el-form>
     </el-tab-pane>

@@ -6,10 +6,12 @@ import router from './router';
 import store from './store';
 import ElementUI from 'element-ui'; 
 import ElementCss from 'element-ui/lib/theme-chalk/index.css';
+import JwChat from 'jwchat';
 
 Vue.config.productionTip = false;
 Vue.use(ElementUI);
 Vue.use(ElementCss);
+Vue.use(JwChat);
 
 new Vue({
   router,

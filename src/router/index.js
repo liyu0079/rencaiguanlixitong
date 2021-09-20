@@ -3,6 +3,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Login from '../views/Login/index.vue';
 import Home from '../views/Home/index.vue';
+import Message from '../views/Message/index.vue'
 
 Vue.use(VueRouter)
 
@@ -17,6 +18,11 @@ const routes = [
     name: 'home',
     component: Home
   },
+  {
+    path: '/message',
+    name: 'message',
+    component: Message
+  }
 ];
 
 const router = new VueRouter({

@@ -47,7 +47,7 @@
       <el-menu-item index="4"
         style=" margin-left:50px;">
         <a href="https://www.ele.me"
-          target="_blank">订单管理</a>
+          target="_blank">人员管理</a>
       </el-menu-item>
       <el-menu-item index="3"
         style=" margin-left:150px;">
@@ -112,17 +112,20 @@
     multiple
     collapse-tags
     style="margin-left: 20px;"
-    placeholder="岗位">
+    placeholder="岗位"
+    class="choose">
     <el-option
       v-for="item in options"
       :key="item.value"
       :label="item.label"
-      :value="item.value">
+      :value="item.value"
+      >
     </el-option>
   </el-select>
+  <div  class="row-col">
   <el-descriptions  direction="vertical" :column="4" border>
   <el-descriptions-item label="企业名">kooriookami</el-descriptions-item>
-  <el-descriptions-item label="HR手机号">18100000000</el-descriptions-item>
+  <el-descriptions-item label="HR手机号">18100000001</el-descriptions-item>
   <el-descriptions-item label="工作地点" :span="2">苏州市</el-descriptions-item>
   <el-descriptions-item label="招聘岗位">
     <el-tag size="small">学校</el-tag>
@@ -131,7 +134,7 @@
 </el-descriptions>
 <el-descriptions  direction="vertical" :column="4" border>
   <el-descriptions-item label="企业名">kooriookami</el-descriptions-item>
-  <el-descriptions-item label="HR手机号">18100000000</el-descriptions-item>
+  <el-descriptions-item label="HR手机号">18100000002</el-descriptions-item>
   <el-descriptions-item label="工作地点" :span="2">苏州市</el-descriptions-item>
   <el-descriptions-item label="招聘岗位">
     <el-tag size="small">学校</el-tag>
@@ -140,7 +143,7 @@
 </el-descriptions>
 <el-descriptions  direction="vertical" :column="4" border>
   <el-descriptions-item label="企业名">kooriookami</el-descriptions-item>
-  <el-descriptions-item label="HR手机号">18100000000</el-descriptions-item>
+  <el-descriptions-item label="HR手机号">18100000003</el-descriptions-item>
   <el-descriptions-item label="工作地点" :span="2">苏州市</el-descriptions-item>
   <el-descriptions-item label="招聘岗位">
     <el-tag size="small">学校</el-tag>
@@ -149,13 +152,32 @@
 </el-descriptions>
 <el-descriptions  direction="vertical" :column="4" border>
   <el-descriptions-item label="企业名">kooriookami</el-descriptions-item>
-  <el-descriptions-item label="HR手机号">18100000000</el-descriptions-item>
+  <el-descriptions-item label="HR手机号">18100000004</el-descriptions-item>
   <el-descriptions-item label="工作地点" :span="2">苏州市</el-descriptions-item>
   <el-descriptions-item label="招聘岗位">
     <el-tag size="small">学校</el-tag>
   </el-descriptions-item>
   <el-descriptions-item label="联系地址">江苏省苏州市吴中区吴中大道 1188 号</el-descriptions-item>
 </el-descriptions>
+<el-descriptions  direction="vertical" :column="4" border>
+  <el-descriptions-item label="企业名">kooriookami</el-descriptions-item>
+  <el-descriptions-item label="HR手机号">18100000004</el-descriptions-item>
+  <el-descriptions-item label="工作地点" :span="2">苏州市</el-descriptions-item>
+  <el-descriptions-item label="招聘岗位">
+    <el-tag size="small">学校</el-tag>
+  </el-descriptions-item>
+  <el-descriptions-item label="联系地址">江苏省苏州市吴中区吴中大道 1188 号</el-descriptions-item>
+</el-descriptions>
+<el-descriptions  direction="vertical" :column="4" border>
+  <el-descriptions-item label="企业名">kooriookami</el-descriptions-item>
+  <el-descriptions-item label="HR手机号">18100000004</el-descriptions-item>
+  <el-descriptions-item label="工作地点" :span="2">苏州市</el-descriptions-item>
+  <el-descriptions-item label="招聘岗位">
+    <el-tag size="small">学校</el-tag>
+  </el-descriptions-item>
+  <el-descriptions-item label="联系地址">江苏省苏州市吴中区吴中大道 1188 号</el-descriptions-item>
+</el-descriptions>
+</div>
   </div>
 </template>
 
@@ -325,10 +347,22 @@ export default {
 .el-select.choose{
   margin-top:30px;
   margin-left: 150px;
+  float: left;
 }
 /* 企业信息 */
+.row-col{
+  display: flex; 
+  justify-content:center; 
+  flex-wrap: wrap;
+  width: 100%;
+}
+.el-descriptions:last-child{
+  margin-bottom: 100px;
+}
 .el-descriptions{
   width: 400px;
-  margin:20px 150px;
+  margin:40px 30px 0px 0px;
 }
+
+
 </style>
